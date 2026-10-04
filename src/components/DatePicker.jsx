@@ -3,6 +3,7 @@ import { addDays, format, startOfToday } from "date-fns";
 export default function DatePicker({ value, onChange }) {
   const today = startOfToday();
   const dates = Array.from({ length: 7 }, (_, index) => addDays(today, index));
+  console.log("value", value);
   return (
     <div className="date-strip">
       {dates.map((date) => {
